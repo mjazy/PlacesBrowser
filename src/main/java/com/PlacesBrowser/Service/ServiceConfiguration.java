@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIPlacesFetcher;
-
 import facebook4j.Facebook;
 import facebook4j.FacebookFactory;
 import facebook4j.auth.AccessToken;
@@ -28,5 +27,5 @@ public class ServiceConfiguration {
 	FacebookGraphAPIPlacesFetcher facebookGraphAPIFPLacesFetcher() {
 		return new FacebookGraphAPIPlacesFetcher();
 	}
-	
+		
 }

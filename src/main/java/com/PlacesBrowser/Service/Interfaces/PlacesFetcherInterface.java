@@ -12,8 +12,8 @@ public interface PlacesFetcherInterface {
 	 * @param country relevant to sought places e.g. Poland.
 	 * @param city relevant to sought places e.g. Poznań.
 	 * @param description relevant to sought places e.g. Cafe.
-	 * @return response body containing name of the place and it's geographical location.
+	 * @return response containing name of the place and it's geographical location.
 	 */
-	String fetchPlaces(String country, String city, String description);
+	Object fetchPlaces(String country, String city, String description);
 
 }
