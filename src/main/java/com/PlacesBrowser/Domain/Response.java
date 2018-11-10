@@ -12,14 +12,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Response {
 	
 	@JsonProperty
-	private List<Place> places;
+	private List<RequirementsCompliantPlace> requirementsCompliantPlaces;
 
-	public List<Place> getPlaces() {
-		return places;
+	public List<RequirementsCompliantPlace> getRequirementsCompliantPlaces() {
+		return requirementsCompliantPlaces;
 	}
 
-	public void setPlaces(List<Place> places) {
-		this.places = places;
+	public void setRequirementsCompliantPlaces(List<RequirementsCompliantPlace> requirementsCompliantPlaces) {
+		this.requirementsCompliantPlaces = requirementsCompliantPlaces;
 	}
 
 }

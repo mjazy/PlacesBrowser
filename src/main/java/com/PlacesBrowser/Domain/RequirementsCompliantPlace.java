@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author MJazy
  *
  */
-public class Place {
+public class RequirementsCompliantPlace {
 
 	@JsonProperty
 	private String name;
@@ -18,7 +18,7 @@ public class Place {
 	@JsonProperty
 	private float longitude;
 	
-	public Place() {
+	public RequirementsCompliantPlace() {
 	}
 
 	public String getName() {
