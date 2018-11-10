@@ -25,6 +25,7 @@ public class FacebookGraphAPIPlacesFetcherTest {
 	@Test
 	public void fetchPlacesTest() {
 		List<Place> fetchPlacesResult = facebookGraphAPIPlacesFetcher.fetchPlaces("poland", "poznan", "Egnyte");
+		System.out.println(fetchPlacesResult);
 		assertThat(fetchPlacesResult.toString(), containsString("Egnyte Poland"));
 		assertThat(fetchPlacesResult.toString(), containsString("52.404719116912"));
 		assertThat(fetchPlacesResult.toString(), containsString("16.940510409764"));
