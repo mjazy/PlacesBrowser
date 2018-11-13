@@ -3,6 +3,7 @@ package com.PlacesBrowser.Service;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIPlaceValidator;
 import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIPlacesFetcher;
 import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIResponseParser;
 import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIUserInputValidator;
@@ -39,6 +40,11 @@ public class ServiceConfiguration {
 	@Bean
 	FacebookGraphAPIUserInputValidator facebookGraphAPIUserInputValidator() {
 		return new FacebookGraphAPIUserInputValidator();
+	}
+	
+	@Bean
+	FacebookGraphAPIPlaceValidator facebookGraphAPIPlaceValidator() {
+		return new FacebookGraphAPIPlaceValidator();
 	}
 		
 }
