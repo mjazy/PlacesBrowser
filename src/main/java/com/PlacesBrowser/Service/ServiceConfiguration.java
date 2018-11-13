@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIPlacesFetcher;
 import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIResponseParser;
+import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIUserInputValidator;
 
 import facebook4j.Facebook;
 import facebook4j.FacebookFactory;
@@ -33,6 +34,11 @@ public class ServiceConfiguration {
 	@Bean
 	FacebookGraphAPIResponseParser facebookGraphAPIResponseParser() {
 		return new FacebookGraphAPIResponseParser();
+	}
+	
+	@Bean
+	FacebookGraphAPIUserInputValidator facebookGraphAPIUserInputValidator() {
+		return new FacebookGraphAPIUserInputValidator();
 	}
 		
 }
