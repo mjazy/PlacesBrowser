@@ -2,6 +2,8 @@ package com.PlacesBrowser.Domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import facebook4j.Place;
+
 /**
  * Data model for place in format compliant with requirements.
  * @author MJazy
@@ -19,6 +21,12 @@ public class RequirementsCompliantPlace {
 	private float longitude;
 	
 	public RequirementsCompliantPlace() {
+	}
+	
+	public RequirementsCompliantPlace(Place place) {
+		this.name = place.getName();
+		this.latitude = place.getLocation().getLatitude().floatValue();
+		this.longitude = place.getLocation().getLongitude().floatValue();
 	}
 
 	public String getName() {

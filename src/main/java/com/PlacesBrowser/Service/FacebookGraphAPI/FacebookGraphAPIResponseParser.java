@@ -29,11 +29,7 @@ public class FacebookGraphAPIResponseParser {
 			
 			if (facebookGraphAPIPlaceValidator.isPlaceValid(place) == true)
 			{			
-			RequirementsCompliantPlace requirementsCompliantPlace = new RequirementsCompliantPlace();
-			requirementsCompliantPlace.setName(place.getName());
-			requirementsCompliantPlace.setLatitude(place.getLocation().getLatitude().floatValue());
-			requirementsCompliantPlace.setLongitude(place.getLocation().getLongitude().floatValue());
-			
+			RequirementsCompliantPlace requirementsCompliantPlace = new RequirementsCompliantPlace(place);			
 			requirementsCompliantPlaces.add(requirementsCompliantPlace);
 			}
 		}
