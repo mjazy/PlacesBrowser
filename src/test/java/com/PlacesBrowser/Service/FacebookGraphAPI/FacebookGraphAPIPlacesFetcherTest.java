@@ -18,10 +18,9 @@ import facebook4j.Place;
 @SpringBootTest
 public class FacebookGraphAPIPlacesFetcherTest {
 	
-	
 	@Inject
 	FacebookGraphAPIPlacesFetcher facebookGraphAPIPlacesFetcher;	
-	
+			
 	@Test
 	public void fetchPlacesTest() {
 		List<Place> fetchPlacesResult = facebookGraphAPIPlacesFetcher.fetchPlaces("poland", "poznan", "Egnyte");

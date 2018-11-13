@@ -1,7 +1,12 @@
 package com.PlacesBrowser.Service;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.InjectionPoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIPlaceValidator;
 import com.PlacesBrowser.Service.FacebookGraphAPI.FacebookGraphAPIPlacesFetcher;
@@ -45,6 +50,12 @@ public class ServiceConfiguration {
 	@Bean
 	FacebookGraphAPIPlaceValidator facebookGraphAPIPlaceValidator() {
 		return new FacebookGraphAPIPlaceValidator();
+	}
+	
+	@Bean
+	@Scope("prototype")
+	Logger logger(InjectionPoint injectionPoint) {
+		return LoggerFactory.getLogger(injectionPoint.getMember().getDeclaringClass());
 	}
 		
 }

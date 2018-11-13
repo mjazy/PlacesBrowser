@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.slf4j.Logger;
+
 import com.PlacesBrowser.Service.Interfaces.PlacesFetcherInterface;
 
 import facebook4j.Facebook;
@@ -22,6 +24,9 @@ public class FacebookGraphAPIPlacesFetcher implements PlacesFetcherInterface {
 	@Inject
 	Facebook facebook;
 	
+	@Inject
+	Logger logger;
+	
 	/**
 	 * 
 	 */
@@ -30,7 +35,7 @@ public class FacebookGraphAPIPlacesFetcher implements PlacesFetcherInterface {
 		try {
 			places = facebook.searchPlaces(String.format("%s %s %s", country, city, description), new Reading().fields("location", "name"));
 		} catch (FacebookException exception) {
-			exception.printStackTrace();
+			logger.error(exception.getErrorMessage());
 		}
 		return places;
 	}
